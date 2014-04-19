@@ -19,7 +19,7 @@ if &t_Co >= 256 || has('gui_running')
   hi Comment          ctermbg=NONE ctermfg=240  guibg=NONE    guifg=#585858 cterm=NONE           gui=NONE
   hi Constant         ctermbg=NONE ctermfg=208  guibg=NONE    guifg=#ff8700 cterm=NONE           gui=NONE
   hi Error            ctermbg=235  ctermfg=131  guibg=#262626 guifg=#af5f5f cterm=reverse        gui=reverse
-  hi Identifier       ctermbg=NONE ctermfg=103  guibg=NONE    guifg=#5f87af cterm=NONE           gui=NONE
+  hi Identifier       ctermbg=NONE ctermfg=67   guibg=NONE    guifg=#5f87af cterm=NONE           gui=NONE
   hi Ignore           ctermbg=NONE ctermfg=235  guibg=NONE    guifg=#262626 cterm=NONE           gui=NONE
   hi PreProc          ctermbg=NONE ctermfg=66   guibg=NONE    guifg=#5f8787 cterm=NONE           gui=NONE
   hi Special          ctermbg=NONE ctermfg=65   guibg=NONE    guifg=#5f875f cterm=NONE           gui=NONE
@@ -44,7 +44,7 @@ if &t_Co >= 256 || has('gui_running')
   hi WarningMsg       ctermbg=NONE ctermfg=131  guibg=NONE    guifg=#af5f5f cterm=NONE           gui=NONE
 
   hi TabLine          ctermbg=234  ctermfg=240  guibg=#1c1c1c guifg=#585858 cterm=NONE           gui=NONE
-  hi TabLineFill      ctermbg=234  ctermfg=234  guibg=#1c1c1c guifg=#1c1c1c cterm=NONE           gui=reverse
+  hi TabLineFill      ctermbg=234  ctermfg=234  guibg=#1c1c1c guifg=#1c1c1c cterm=NONE           gui=NONE
   hi TabLineSel       ctermbg=236  ctermfg=73   guibg=#303030 guifg=#5fafaf cterm=NONE           gui=NONE
 
   hi Cursor           ctermbg=242  ctermfg=NONE guibg=#6c6c6c guifg=NONE    cterm=NONE           gui=NONE
@@ -91,39 +91,38 @@ if &t_Co >= 256 || has('gui_running')
   hi SignColumn       ctermbg=238  ctermfg=235  guibg=#444444 guifg=#262626 cterm=NONE           gui=NONE
 
 else
-  hi Normal           ctermbg=NONE        ctermfg=LightGrey   cterm=NONE
-  hi Boolean          ctermbg=NONE        ctermfg=DarkYellow  cterm=NONE
-  hi Comment          ctermbg=NONE        ctermfg=DarkBlue    cterm=NONE
-  hi Constant         ctermbg=NONE        ctermfg=DarkYellow  cterm=NONE
-  hi Function         ctermbg=NONE        ctermfg=Yellow      cterm=NONE
+  hi Normal           ctermbg=NONE        ctermfg=Grey        cterm=NONE
+  hi Comment          ctermbg=NONE        ctermfg=Black       cterm=bold
+  hi Constant         ctermbg=NONE        ctermfg=Red         cterm=bold
+  hi Function         ctermbg=NONE        ctermfg=Yellow      cterm=bold
   hi Identifier       ctermbg=NONE        ctermfg=Blue        cterm=NONE
-  hi PreProc          ctermbg=NONE        ctermfg=DarkCyan    cterm=NONE
-  hi Special          ctermbg=NONE        ctermfg=DarkGreen   cterm=NONE
-  hi Statement        ctermbg=NONE        ctermfg=DarkCyan    cterm=NONE
-  hi String           ctermbg=NONE        ctermfg=DarkGreen   cterm=NONE
+  hi PreProc          ctermbg=NONE        ctermfg=Cyan        cterm=NONE
+  hi Special          ctermbg=NONE        ctermfg=Green       cterm=bold
+  hi Statement        ctermbg=NONE        ctermfg=Cyan        cterm=NONE
+  hi String           ctermbg=NONE        ctermfg=Green       cterm=NONE
   hi Todo             ctermbg=NONE        ctermfg=NONE        cterm=reverse
-  hi Type             ctermbg=NONE        ctermfg=DarkMagenta cterm=NONE
+  hi Type             ctermbg=NONE        ctermfg=DarkMagenta     cterm=bold
 
-  hi Error            ctermbg=Red         ctermfg=White       cterm=NONE
+  hi Error            ctermbg=Black       ctermfg=Red         cterm=reverse
   hi Ignore           ctermbg=NONE        ctermfg=NONE        cterm=NONE
   hi Underlined       ctermbg=NONE        ctermfg=Cyan        cterm=underline
 
-  hi LineNr           ctermbg=NONE        ctermfg=DarkBlue    cterm=NONE
-  hi NonText          ctermbg=NONE        ctermfg=DarkBlue    cterm=NONE
+  hi LineNr           ctermbg=NONE        ctermfg=DarkGrey    cterm=bold
+  hi NonText          ctermbg=NONE        ctermfg=DarkGrey    cterm=bold
 
-  hi Pmenu            ctermbg=NONE        ctermfg=White       cterm=NONE
-  hi PmenuSbar        ctermbg=White       ctermfg=NONE        cterm=NONE
+  hi Pmenu            ctermbg=Grey        ctermfg=Black       cterm=NONE
+  hi PmenuSbar        ctermbg=Grey        ctermfg=NONE        cterm=NONE
   hi PmenuSel         ctermbg=Green       ctermfg=Black       cterm=NONE
   hi PmenuThumb       ctermbg=Green       ctermfg=NONE        cterm=NONE
 
-  hi ErrorMsg         ctermbg=NONE        ctermfg=Red         cterm=NONE
-  hi ModeMsg          ctermbg=NONE        ctermfg=Green       cterm=NONE
+  hi ErrorMsg         ctermbg=Red         ctermfg=Black       cterm=NONE
+  hi ModeMsg          ctermbg=Green       ctermfg=Black       cterm=NONE
   hi MoreMsg          ctermbg=NONE        ctermfg=Cyan        cterm=NONE
   hi Question         ctermbg=NONE        ctermfg=Green       cterm=NONE
   hi WarningMsg       ctermbg=NONE        ctermfg=Red         cterm=NONE
 
-  hi TabLine          ctermbg=DarkBlue    ctermfg=Black       cterm=NONE
-  hi TabLineFill      ctermbg=DarkBlue    ctermfg=DarkBlue    cterm=NONE
+  hi TabLine          ctermbg=Blue        ctermfg=Black       cterm=NONE
+  hi TabLineFill      ctermbg=Blue        ctermfg=Blue        cterm=NONE
   hi TabLineSel       ctermbg=Cyan        ctermfg=Black       cterm=NONE
 
   hi Cursor           ctermbg=NONE        ctermfg=NONE        cterm=NONE
@@ -139,22 +138,22 @@ else
   hi Visual           ctermbg=White       ctermfg=Black       cterm=NONE
   hi VisualNOS        ctermbg=NONE        ctermfg=NONE        cterm=bold,underline
 
-  hi FoldColumn       ctermbg=DarkRed     ctermfg=White       cterm=NONE
-  hi Folded           ctermbg=DarkRed     ctermfg=White       cterm=NONE
+  hi FoldColumn       ctermbg=Red         ctermfg=White       cterm=NONE
+  hi Folded           ctermbg=Red         ctermfg=White       cterm=NONE
 
-  hi VertSplit        ctermbg=DarkCyan    ctermfg=DarkCyan    cterm=NONE
+  hi VertSplit        ctermbg=Blue        ctermfg=Blue        cterm=NONE
   hi WildMenu         ctermbg=Yellow      ctermfg=Black       cterm=NONE
 
   hi Function         ctermbg=NONE        ctermfg=Yellow      cterm=NONE
-  hi SpecialKey       ctermbg=NONE        ctermfg=DarkMagenta cterm=NONE
+  hi SpecialKey       ctermbg=NONE        ctermfg=DarkGrey    cterm=bold
   hi Title            ctermbg=NONE        ctermfg=White       cterm=bold
 
-  hi DiffAdd          ctermbg=DarkGreen   ctermfg=Black       cterm=NONE
+  hi DiffAdd          ctermbg=Green       ctermfg=Black       cterm=NONE
   hi DiffChange       ctermbg=Blue        ctermfg=Black       cterm=NONE
-  hi DiffDelete       ctermbg=DarkRed     ctermfg=Black       cterm=NONE
+  hi DiffDelete       ctermbg=Red         ctermfg=Black       cterm=NONE
   hi DiffText         ctermbg=Cyan        ctermfg=Black       cterm=NONE
 
-  hi IncSearch        ctermbg=DarkRed     ctermfg=Black       cterm=NONE
+  hi IncSearch        ctermbg=Red         ctermfg=Black       cterm=NONE
   hi Search           ctermbg=Green       ctermfg=Black       cterm=NONE
 
   hi Directory        ctermbg=NONE        ctermfg=Cyan        cterm=NONE
@@ -164,8 +163,8 @@ else
   hi SpellLocal       ctermbg=NONE        ctermfg=Green       cterm=undercurl
   hi SpellRare        ctermbg=NONE        ctermfg=Magenta     cterm=undercurl
 
-  hi ColorColumn      ctermbg=DarkRed     ctermfg=NONE        cterm=NONE
-  hi SignColumn       ctermbg=DarkMagenta ctermfg=Black       cterm=NONE
+  hi ColorColumn      ctermbg=Red         ctermfg=NONE        cterm=NONE
+  hi SignColumn       ctermbg=Magenta     ctermfg=Black       cterm=NONE
 
 endif
 
@@ -196,7 +195,7 @@ hi link Tag                Special
 hi link Typedef            Type
 
 hi link htmlEndTag         htmlTagName
-hi link htmlLink           String
+hi link htmlLink           Function
 hi link htmlSpecialTagName htmlTagName
 hi link htmlTag            htmlTagName
 
