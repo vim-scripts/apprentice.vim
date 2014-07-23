@@ -4,21 +4,21 @@ Apprentice is a low-contrast colorscheme for Vim based on the awesome [Sorcerer]
 
 It’s essentially a streamlined version of the original with a reduced number of colors entirely taken from the default xterm palette to ensure a similar look in 256 colors-ready terminal emulators and GUI Vim.
 
-JavaScript in GVim:
+Some JavaScript, in MacVim:
 
-![JavaScript](http://romainl.github.io/Apprentice/images/apprentice_js.png)
+![image](http://romainl.github.io/Apprentice/images/0MacVim.png)
 
-Python in Gnome terminal with `TERM=xterm-256color`:
+The same JavaScript, in iTerm, with `TERM=xterm-256color`:
 
-![Python](http://romainl.github.io/Apprentice/images/apprentice_py.png)
+![image](http://romainl.github.io/Apprentice/images/0256term.png)
 
-Vimscript in Gnome Terminal with `TERM=xterm`:
+The same JavaScript, in iTerm, with `TERM=xterm`, using the default xterm color palette:
 
-![Vim](http://romainl.github.io/Apprentice/images/apprentice_vim.png)
+![image](http://romainl.github.io/Apprentice/images/016termxterm.png)
 
 ## Preparing your environment.
 
-Apprentice is designed first and foremost to look “good” in terminal emulators supporting 256 colors and GUI Vim (GVim/MacVim). It supports less capable terminal emulators in the sense that you still get colors, but it will definitely look “better” in more powerful environments.
+Apprentice is designed first and foremost to look “good” in terminal emulators supporting 256 colors and in GUI Vim (GVim/MacVim). It supports lesser terminal emulators in the sense that it doesn’t break but it will definitely look “better” in more powerful environments.
 
 ### GVim/MacVim
 
@@ -44,7 +44,7 @@ Please refer to your terminal emulator’s manual for how to set it up properly.
 
 NB: I’ve started [a wiki page](https://github.com/romainl/Apprentice/wiki/256-colors-and-you.) listing the procedures for the terminal emlators above.
 
-For best results, it’s recommended to adjust your background color to the one used in Apprentice:
+For best results, it’s recommended to adjust your background color to the one used in the GUI/256color version of Apprentice:
 
 * xterm color: `235`
 * hexadecimal color: `#262626`
@@ -79,46 +79,28 @@ but it could be:
 
 or whatever works for you.
 
-Here are the most common installation methods:
+### Working with a 8 colors terminal
 
-### Manually:
+As an alternative to `xterm-256color`, you can also leave your `TERM` at its default value, (usually `xterm` or `screen`, as we saw earlier) and set your terminal emulator to use the Apprentice colorscheme instead of its default colors.
 
-1. Download [the latest release](https://github.com/romainl/Apprentice/releases/latest).
-2. Unzip it somewhere on your machine.
-3. Copy the file `colors/apprentice.vim` to `~/.vim/colors/apprentice.vim`.
+The same JavaScript as above, in iTerm, with `TERM=xterm`, using the color palette below:
 
-### With [Pathogen](https://github.com/tpope/vim-pathogen):
+![image](http://romainl.github.io/Apprentice/images/016termapprentice.png)
 
-#### The grumpy way:
+Use a color picker or copy/paste these values:
 
-1. Download [the latest release](https://github.com/romainl/Apprentice/releases/latest).
-2. Unzip it under `~/.vim/bundle/`.
-
-#### The hipster way:
-
-    $ git clone https://github.com/romainl/Apprentice.git ~/.vim/bundle/apprentice
-
-### With [Vundle](https://github.com/gmarik/Vundle.vim):
-
-1. Add this line to your `~/.vimrc`, together with the rest of your `Plugin` lines:
-
-        Plugin 'romainl/Apprentice'
-
-2. Run this command to finish the installation:
-
-        :PluginInstall
-
-### With [NeoBundle](https://github.com/Shougo/neobundle.vim):
-
-1. Add this line to your `~/.vimrc`, together with the rest of your `NeoBundle` lines:
-
-        NeoBundle 'romainl/Apprentice'
-
-2. Run this command to finish the installation:
-
-        :NeoBundleInstall
-
-Hmmm… I wonder where does that strange feeling of déjà-vu comes from?
+| Intensity | Name    | Normal                                                                      | Bright                                                                      |
+|-----------|---------|-----------------------------------------------------------------------------|-----------------------------------------------------------------------------|
+| 0         | Black   | `#1C1C1C` ![#1C1C1C](http://romainl.github.io/Apprentice/images/1c1c1c.png) | `#444444` ![#444444](http://romainl.github.io/Apprentice/images/444444.png) |
+| 1         | Red     | `#AF5F5F` ![#AF5F5F](http://romainl.github.io/Apprentice/images/af5f5f.png) | `#FF8700` ![#FF8700](http://romainl.github.io/Apprentice/images/ff8700.png) |
+| 2         | Green   | `#5F875F` ![#5F875F](http://romainl.github.io/Apprentice/images/5f875f.png) | `#87AF87` ![#87AF87](http://romainl.github.io/Apprentice/images/87af87.png) |
+| 3         | Yellow  | `#87875F` ![#87875F](http://romainl.github.io/Apprentice/images/87875f.png) | `#FFFFAF` ![#FFFFAF](http://romainl.github.io/Apprentice/images/ffffaf.png) |
+| 4         | Blue    | `#5F87AF` ![#5F87AF](http://romainl.github.io/Apprentice/images/5f87af.png) | `#8FAFD7` ![#8FAFD7](http://romainl.github.io/Apprentice/images/8fafd7.png) |
+| 5         | Magenta | `#5F5F87` ![#5F5F87](http://romainl.github.io/Apprentice/images/5f5f87.png) | `#8787AF` ![#8787AF](http://romainl.github.io/Apprentice/images/8787af.png) |
+| 6         | Cyan    | `#5F8787` ![#5F8787](http://romainl.github.io/Apprentice/images/5f8787.png) | `#5FAFAF` ![#5FAFAF](http://romainl.github.io/Apprentice/images/5fafaf.png) |
+| 7         | White   | `#6C6C6C` ![#6C6C6C](http://romainl.github.io/Apprentice/images/6c6c6c.png) | `#FFFFFF` ![#FFFFFF](http://romainl.github.io/Apprentice/images/ffffff.png) |
+|| Foreground color   | `#BCBCBC` ![#BCBCBC](http://romainl.github.io/Apprentice/images/bcbcbc.png)                                                                              ||
+|| Background color   | `#262626` ![#262626](http://romainl.github.io/Apprentice/images/262626.png)                                                                              ||
 
 ## Enabling Apprentice.
 
