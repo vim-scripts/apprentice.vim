@@ -48,7 +48,7 @@ The table below contains a subset of Apprentice’s palette. You can use a color
 | 7                | `#6C6C6C` ![#6C6C6C](http://romainl.github.io/Apprentice/images/6c6c6c.png) | 15               | `#FFFFFF` ![#FFFFFF](http://romainl.github.io/Apprentice/images/ffffff.png) |
 | Foreground color | `#BCBCBC` ![#BCBCBC](http://romainl.github.io/Apprentice/images/bcbcbc.png) | Background color | `#262626` ![#262626](http://romainl.github.io/Apprentice/images/262626.png) |
 
-The same JavaScript as above, in iTerm, with `TERM=xterm`, using the color palette below:
+The same JavaScript file as above, in iTerm, with `TERM=xterm`, using the color palette above:
 
 ![image](http://romainl.github.io/Apprentice/images/016termapprentice.png)
 
@@ -84,6 +84,24 @@ If you like what you see and want to make Apprentice your default colorscheme, a
 
     colorscheme apprentice
 
+## What they say about Apprentice.
+
+* Vimgor, in #vim: *“A colorscheme as subtle, gentle and pleasant as its creator isn't.”*
+
+* Gfixler, in [r/vim](http://www.reddit.com/r/vim/comments/2fws13/syntax_on/cke2ued): *“I've been enjoying Apprentice. It's the only color scheme so far that I haven't felt like modifying in any way.”*
+
+* dddbbb, in [r/vim](http://www.reddit.com/r/vim/comments/2fws13/syntax_on/ckekyg1): *“Haha, you've been quoted in the readme. romainl is still with us in spirit! Apprentice looks nice, and it's great that seems simple to get it working in terminal (no t_co hacks).”*
+
+;-)
+
 ---
 
 If light colorschemes are more your thing, [Disciple](https://github.com/romainl/Disciple) is the negative version of Apprentice.
+
+---
+
+Note: all the screenshots were taken on my home machine, running Mac OS X 10.7.5, with the "light" anti-aliasing setting and the gorgeous [Fira Mono](http://www.carrois.com/fira-3-1/). Newer Mac OS X versions don't make that option available anymore so, if you think your text is too fat, you can try this command before restarting MacVim/iTerm/Terminal:
+
+    defaults -currentHost write -globalDomain AppleFontSmoothing -int 0
+
+That setting works very well on my old and small display at home but it is definitely not optimal on my 27" iMac at work so… YMMV.
