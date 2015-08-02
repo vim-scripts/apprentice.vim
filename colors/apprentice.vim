@@ -1,42 +1,40 @@
 " 'apprentice.vim' -- Vim color scheme.
-" Maintainer:   Romain Lafourcade (romainlafourcade@gmail.com)
-" Essentially a streamlining and conversion to xterm colors of
-" 'sorcerer' by Jeet Sukumaran (jeetsukumaran@gmailcom)
+" Author:       Romain Lafourcade (romainlafourcade@gmail.com)
+" Description:  Essentially a streamlining and conversion to xterm colors of
+"               'sorcerer' by Jeet Sukumaran (jeetsukumaran@gmailcom)
 
-" MADE-UP NAME    HEX        XTERM  ANSI
-" ==================================================
-" almost black    #1c1c1c    234    0
-" darker grey     #262626    235    background color
-" dark grey       #303030    236    8
-" grey            #444444    238    8
-" medium grey     #585858    240    8
-" light grey      #6c6c6c    242    7
-" lighter grey    #bcbcbc    250    foreground color
-" white           #ffffff    231    15
-" purple          #5f5f87    60     5
-" light purple    #8787af    103    13
-" green           #5f875f    65     2
-" light green     #87af87    108    10
-" aqua            #5f8787    66     6
-" light aqua      #5fafaf    73     14
-" blue            #5f87af    67     4
-" light blue      #8fafd7    110    12
-" red             #af5f5f    131    1
-" orange          #ff8700    208    9
-" ocre            #87875f    101    3
-" yellow          #ffffaf    229    11
+" MADE-UP NAME    HEX        RGB                   XTERM  ANSI
+" ========================================================================
+" almost black    #1c1c1c    rgb(28, 28, 28)       234    0
+" darker grey     #262626    rgb(38, 38, 38)       235    background color
+" dark grey       #303030    rgb(48, 48, 48)       236    8
+" grey            #444444    rgb(68, 68, 68)       238    8
+" medium grey     #585858    rgb(88, 88, 88)       240    8
+" light grey      #6c6c6c    rgb(108, 108, 108)    242    7
+" lighter grey    #bcbcbc    rgb(188, 188, 188)    250    foreground color
+" white           #ffffff    rgb(255, 255, 255)    231    15
+" purple          #5f5f87    rgb(95, 95, 135)      60     5
+" light purple    #8787af    rgb(135, 135, 175)    103    13
+" green           #5f875f    rgb(95, 135, 95)      65     2
+" light green     #87af87    rgb(135, 175, 135)    108    10
+" aqua            #5f8787    rgb(95, 135, 135)     66     6
+" light aqua      #5fafaf    rgb(95, 175, 175)     73     14
+" blue            #5f87af    rgb(95, 135, 175)     67     4
+" light blue      #8fafd7    rgb(143, 175, 215)    110    12
+" red             #af5f5f    rgb(175, 95, 95)      131    1
+" orange          #ff8700    rgb(255, 135, 0)      208    9
+" ocre            #87875f    rgb(135, 135, 95)     101    3
+" yellow          #ffffaf    rgb(255, 255, 175)    229    11
 
 hi clear
 
-if exists('syntax_on')
+if exists("syntax_on")
   syntax reset
 endif
 
-set background=dark
+let colors_name = "apprentice"
 
-let colors_name = 'apprentice'
-
-if &t_Co >= 256 || has('gui_running')
+if ($TERM =~ '256' && &t_Co >= 256) || has("gui_running")
   hi Normal           ctermbg=235  ctermfg=250  guibg=#262626 guifg=#bcbcbc cterm=NONE           gui=NONE
 
   set background=dark
@@ -102,7 +100,7 @@ if &t_Co >= 256 || has('gui_running')
   hi DiffText         ctermbg=103  ctermfg=235  guibg=#8787af guifg=#262626 cterm=NONE           gui=NONE
 
   hi IncSearch        ctermbg=131  ctermfg=235  guibg=#af5f5f guifg=#262626 cterm=NONE           gui=NONE
-  hi Search           ctermbg=108  ctermfg=235  guibg=#87af87 guifg=#262626 cterm=NONE           gui=NONE
+  hi Search           ctermbg=229  ctermfg=235  guibg=#ffffaf guifg=#262626 cterm=NONE           gui=NONE
 
   hi Directory        ctermbg=NONE ctermfg=73   guibg=NONE    guifg=#5fafaf cterm=NONE           gui=NONE
   hi MatchParen       ctermbg=234  ctermfg=229  guibg=#1c1c1c guifg=#ffffaf cterm=NONE           gui=NONE
@@ -117,84 +115,84 @@ if &t_Co >= 256 || has('gui_running')
 elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
   set t_Co=16
 
-  hi Normal           ctermbg=NONE        ctermfg=15          cterm=NONE
+  hi Normal           ctermbg=NONE        ctermfg=white          cterm=NONE
 
   set background=dark
 
-  hi Comment          ctermbg=NONE        ctermfg=8           cterm=NONE
-  hi Constant         ctermbg=NONE        ctermfg=9           cterm=NONE
-  hi Function         ctermbg=NONE        ctermfg=11          cterm=NONE
-  hi Identifier       ctermbg=NONE        ctermfg=4           cterm=NONE
-  hi PreProc          ctermbg=NONE        ctermfg=6           cterm=NONE
-  hi Special          ctermbg=NONE        ctermfg=2           cterm=NONE
-  hi Statement        ctermbg=NONE        ctermfg=12          cterm=NONE
-  hi String           ctermbg=NONE        ctermfg=10          cterm=NONE
+  hi Comment          ctermbg=NONE        ctermfg=gray        cterm=NONE
+  hi Constant         ctermbg=NONE        ctermfg=red         cterm=NONE
+  hi Function         ctermbg=NONE        ctermfg=yellow      cterm=NONE
+  hi Identifier       ctermbg=NONE        ctermfg=darkblue    cterm=NONE
+  hi PreProc          ctermbg=NONE        ctermfg=darkcyan    cterm=NONE
+  hi Special          ctermbg=NONE        ctermfg=darkgreen   cterm=NONE
+  hi Statement        ctermbg=NONE        ctermfg=blue        cterm=NONE
+  hi String           ctermbg=NONE        ctermfg=green       cterm=NONE
   hi Todo             ctermbg=NONE        ctermfg=NONE        cterm=reverse
-  hi Type             ctermbg=NONE        ctermfg=13          cterm=NONE
+  hi Type             ctermbg=NONE        ctermfg=magenta     cterm=NONE
 
-  hi Error            ctermbg=NONE        ctermfg=1           cterm=reverse
+  hi Error            ctermbg=NONE        ctermfg=darkred     cterm=reverse
   hi Ignore           ctermbg=NONE        ctermfg=NONE        cterm=NONE
-  hi Underlined       ctermbg=NONE        ctermfg=6           cterm=underline
+  hi Underlined       ctermbg=NONE        ctermfg=NONE        cterm=reverse
 
-  hi LineNr           ctermbg=0           ctermfg=7           cterm=NONE
-  hi NonText          ctermbg=NONE        ctermfg=8           cterm=NONE
+  hi LineNr           ctermbg=black       ctermfg=gray        cterm=NONE
+  hi NonText          ctermbg=NONE        ctermfg=darkgray    cterm=NONE
 
-  hi Pmenu            ctermbg=8           ctermfg=15          cterm=NONE
-  hi PmenuSbar        ctermbg=7           ctermfg=NONE        cterm=NONE
-  hi PmenuSel         ctermbg=6           ctermfg=0           cterm=NONE
-  hi PmenuThumb       ctermbg=6           ctermfg=NONE        cterm=NONE
+  hi Pmenu            ctermbg=darkgray    ctermfg=white       cterm=NONE
+  hi PmenuSbar        ctermbg=gray        ctermfg=NONE        cterm=NONE
+  hi PmenuSel         ctermbg=darkcyan    ctermfg=black       cterm=NONE
+  hi PmenuThumb       ctermbg=darkcyan    ctermfg=NONE        cterm=NONE
 
-  hi ErrorMsg         ctermbg=1           ctermfg=0           cterm=NONE
-  hi ModeMsg          ctermbg=2           ctermfg=0           cterm=NONE
-  hi MoreMsg          ctermbg=NONE        ctermfg=6           cterm=NONE
-  hi Question         ctermbg=NONE        ctermfg=10          cterm=NONE
-  hi WarningMsg       ctermbg=NONE        ctermfg=1           cterm=NONE
+  hi ErrorMsg         ctermbg=darkred     ctermfg=black       cterm=NONE
+  hi ModeMsg          ctermbg=darkgreen   ctermfg=black       cterm=NONE
+  hi MoreMsg          ctermbg=NONE        ctermfg=darkcyan    cterm=NONE
+  hi Question         ctermbg=NONE        ctermfg=green       cterm=NONE
+  hi WarningMsg       ctermbg=NONE        ctermfg=darkred     cterm=NONE
 
-  hi TabLine          ctermbg=8           ctermfg=3           cterm=NONE
-  hi TabLineFill      ctermbg=8           ctermfg=0           cterm=NONE
-  hi TabLineSel       ctermbg=3           ctermfg=0           cterm=NONE
+  hi TabLine          ctermbg=darkgray    ctermfg=darkyellow  cterm=NONE
+  hi TabLineFill      ctermbg=darkgray    ctermfg=black       cterm=NONE
+  hi TabLineSel       ctermbg=darkyellow  ctermfg=black       cterm=NONE
 
   hi Cursor           ctermbg=NONE        ctermfg=NONE        cterm=NONE
-  hi CursorColumn     ctermbg=8           ctermfg=NONE        cterm=NONE
-  hi CursorLine       ctermbg=NONE        ctermfg=NONE        cterm=underline
-  hi CursorLineNr     ctermbg=0           ctermfg=14          cterm=NONE
+  hi CursorColumn     ctermbg=darkgray    ctermfg=NONE        cterm=NONE
+  hi CursorLine       ctermbg=darkgray    ctermfg=NONE        cterm=NONE
+  hi CursorLineNr     ctermbg=black       ctermfg=cyan        cterm=NONE
 
   hi helpLeadBlank    ctermbg=NONE        ctermfg=NONE        cterm=NONE
   hi helpNormal       ctermbg=NONE        ctermfg=NONE        cterm=NONE
 
-  hi StatusLine       ctermbg=3           ctermfg=0           cterm=NONE
-  hi StatusLineNC     ctermbg=8           ctermfg=0           cterm=NONE
+  hi StatusLine       ctermbg=darkyellow  ctermfg=black       cterm=NONE
+  hi StatusLineNC     ctermbg=darkgray    ctermfg=black       cterm=NONE
 
-  hi Visual           ctermbg=12          ctermfg=0           cterm=NONE
-  hi VisualNOS        ctermbg=NONE        ctermfg=NONE        cterm=underline
+  hi Visual           ctermbg=blue        ctermfg=black       cterm=NONE
+  hi VisualNOS        ctermbg=white       ctermfg=black       cterm=NONE
 
-  hi FoldColumn       ctermbg=0           ctermfg=8           cterm=NONE
-  hi Folded           ctermbg=0           ctermfg=8           cterm=NONE
+  hi FoldColumn       ctermbg=black       ctermfg=darkgray    cterm=NONE
+  hi Folded           ctermbg=black       ctermfg=darkgray    cterm=NONE
 
-  hi VertSplit        ctermbg=8           ctermfg=8           cterm=NONE
-  hi WildMenu         ctermbg=12          ctermfg=0           cterm=NONE
+  hi VertSplit        ctermbg=darkgray    ctermfg=darkgray    cterm=NONE
+  hi WildMenu         ctermbg=blue        ctermfg=black       cterm=NONE
 
-  hi SpecialKey       ctermbg=NONE        ctermfg=8           cterm=NONE
-  hi Title            ctermbg=NONE        ctermfg=15          cterm=NONE
+  hi SpecialKey       ctermbg=NONE        ctermfg=darkgray    cterm=NONE
+  hi Title            ctermbg=NONE        ctermfg=white       cterm=NONE
 
-  hi DiffAdd          ctermbg=2           ctermfg=0           cterm=NONE
-  hi DiffChange       ctermbg=6           ctermfg=0           cterm=NONE
-  hi DiffDelete       ctermbg=1           ctermfg=0           cterm=NONE
-  hi DiffText         ctermbg=11          ctermfg=0           cterm=NONE
+  hi DiffAdd          ctermbg=darkgreen   ctermfg=black       cterm=NONE
+  hi DiffChange       ctermbg=darkcyan    ctermfg=black       cterm=NONE
+  hi DiffDelete       ctermbg=darkred     ctermfg=black       cterm=NONE
+  hi DiffText         ctermbg=yellow      ctermfg=black       cterm=NONE
 
-  hi IncSearch        ctermbg=1           ctermfg=0           cterm=NONE
-  hi Search           ctermbg=2           ctermfg=0           cterm=NONE
+  hi IncSearch        ctermbg=darkred     ctermfg=black       cterm=NONE
+  hi Search           ctermbg=yellow      ctermfg=black       cterm=NONE
 
-  hi Directory        ctermbg=NONE        ctermfg=14          cterm=NONE
-  hi MatchParen       ctermbg=0           ctermfg=11          cterm=NONE
+  hi Directory        ctermbg=NONE        ctermfg=cyan        cterm=NONE
+  hi MatchParen       ctermbg=black       ctermfg=yellow      cterm=NONE
 
-  hi SpellBad         ctermbg=NONE        ctermfg=1           cterm=undercurl
-  hi SpellCap         ctermbg=NONE        ctermfg=3           cterm=undercurl
-  hi SpellLocal       ctermbg=NONE        ctermfg=2           cterm=undercurl
-  hi SpellRare        ctermbg=NONE        ctermfg=5           cterm=undercurl
+  hi SpellBad         ctermbg=NONE        ctermfg=darkred     cterm=undercurl
+  hi SpellCap         ctermbg=NONE        ctermfg=darkyellow  cterm=undercurl
+  hi SpellLocal       ctermbg=NONE        ctermfg=darkgreen   cterm=undercurl
+  hi SpellRare        ctermbg=NONE        ctermfg=darkmagenta cterm=undercurl
 
-  hi ColorColumn      ctermbg=1           ctermfg=NONE        cterm=NONE
-  hi SignColumn       ctermbg=0           ctermfg=8           cterm=NONE
+  hi ColorColumn      ctermbg=darkred     ctermfg=NONE        cterm=NONE
+  hi SignColumn       ctermbg=black       ctermfg=darkgray    cterm=NONE
 endif
 
 hi link Boolean            Constant
@@ -231,6 +229,8 @@ hi link xmlTag             Statement
 hi link xmlTagName         Statement
 hi link xmlEndTag          Statement
 
+hi link markdownItalic     Preproc
+
 hi link diffBDiffer        WarningMsg
 hi link diffCommon         WarningMsg
 hi link diffDiffer         WarningMsg
@@ -240,3 +240,24 @@ hi link diffNoEOL          WarningMsg
 hi link diffOnly           WarningMsg
 hi link diffRemoved        WarningMsg
 hi link diffAdded          String
+
+if $NVIM_TUI_ENABLE_TRUE_COLOR == 1
+  let g:terminal_foreground =  "#BCBCBC"
+  let g:terminal_background =  "#262626"
+  let g:terminal_color_0 =     "#1C1C1C"
+  let g:terminal_color_8 =     "#444444"
+  let g:terminal_color_1 =     "#AF5F5F"
+  let g:terminal_color_9 =     "#FF8700"
+  let g:terminal_color_2 =     "#5F875F"
+  let g:terminal_color_10 =    "#87AF87"
+  let g:terminal_color_3 =     "#87875F"
+  let g:terminal_color_11 =    "#FFFFAF"
+  let g:terminal_color_4 =     "#5F87AF"
+  let g:terminal_color_12 =    "#8FAFD7"
+  let g:terminal_color_5 =     "#5F5F87"
+  let g:terminal_color_13 =    "#8787AF"
+  let g:terminal_color_6 =     "#5F8787"
+  let g:terminal_color_14 =    "#5FAFAF"
+  let g:terminal_color_7 =     "#6C6C6C"
+  let g:terminal_color_15 =    "#FFFFFF"
+endif

@@ -4,21 +4,25 @@ Apprentice is a dark, low-contrast colorscheme for Vim based on the awesome [Sor
 
 It is essentially a streamlined version of the original, with a reduced number of colors entirely taken from the default xterm palette to ensure a similar look in 256colors-ready terminal emulators and GUI Vim.
 
-Some JavaScript, in MacVim:
+Some code in MacVim:
 
-![image](http://romainl.github.io/Apprentice/images/0MacVim.png)
+![image](http://romainl.github.io/Apprentice/images/0macvim.png)
 
-The same JavaScript, in iTerm, with `TERM=xterm-256color`:
+Some code in iTerm, with `TERM=xterm-256color`:
 
 ![image](http://romainl.github.io/Apprentice/images/0256term.png)
 
-The same JavaScript, in iTerm, with `TERM=xterm`, using the Tango color palette:
+Some code in mintty, with `TERM=xterm-256color`:
+
+![image](http://romainl.github.io/Apprentice/images/0256mintty.png)
+
+Some code in iTerm, with `TERM=xterm`, using the Tango color palette:
 
 ![image](http://romainl.github.io/Apprentice/images/08termtango.png)
 
 ## Preparing your environment.
 
-Apprentice is designed first and foremost to look “good” in terminal emulators supporting 256 colors and in GUI Vim (GVim/MacVim). It supports lesser terminal emulators in the sense that it doesn’t break but it will definitely look “better” in more powerful environments.
+Apprentice is designed first and foremost to look “good” in terminal emulators supporting 256 colors and in GUI Vim (GVim/MacVim). It supports lesser terminal emulators in the sense that it doesn’t break but it will definitely look “better” in more capable environments.
 
 ### GVim/MacVim
 
@@ -28,7 +32,7 @@ There is nothing to do for GVim/MacVim as GUI Vim supports millions of colors by
 
 Most terminal emulators in use nowadays *can* display 256 colors but most of them use a default `TERM` that tells Vim otherwise. Assuming your terminal emulator actually supports 256 colors, you must instruct it to brag about its terminal-hood by setting the correct `TERM` environment variable.
 
-The “ideal” `TERM` usually includes the string `256color` like `xterm-256color`. The actual value is highly dependent on your terminal emulator and/or your terminal multiplexer, though, so you will have to refer to their manual.
+The “ideal” `TERM` usually includes the string `256color`, like `xterm-256color`. The actual value is highly dependent on your terminal emulator and/or your terminal multiplexer, though, so you will have to refer to their manual.
 
 ### Working with 8/16 colors
 
@@ -69,16 +73,42 @@ Here is a sample `~/.Xresources` for you Linux/BSD users:
     *.color7:     #6C6C6C
     *.color15:    #FFFFFF
 
-The same JavaScript file as above, in iTerm, with `TERM=xterm`, using the color palette above:
+And a sample `~/.minttyrc` for you Cygwin users:
+
+    ForegroundColour=188,188,188
+    BackgroundColour=38,38,38
+    Black=28,28,28
+    Red=175,95,95
+    Green=95,135,95
+    Yellow=135,135,95
+    Blue=95,135,175
+    Magenta=95,95,135
+    Cyan=95,135,135
+    White=108,108,108
+    BoldBlack=68,68,68
+    BoldRed=255,135,0
+    BoldGreen=135,175,135
+    BoldYellow=255,255,175
+    BoldBlue=143,175,215
+    BoldMagenta=135,135,175
+    BoldCyan=95,175,175
+    BoldWhite=255,255,255
+
+Some code in iTerm, with `TERM=xterm`, using the color palette above:
 
 ![image](http://romainl.github.io/Apprentice/images/08termapprentice.png)
 
+Some code in the Windows console, with `TERM=cygwin`, using the color palette above:
+
+![image](http://romainl.github.io/Apprentice/images/016console.png)
+
 ### All terminal emulators
 
-For best results, it is recommended to adjust your background color to the one used in the GUI/256color version of Apprentice:
+I recommend to adjust your terminal's background color to the one used in Apprentice if you want to avoid having a “frame” around Vim:
 
-* xterm color: `235`
-* hexadecimal color: `#262626`
+* xterm notation: `235`
+* hexadecimal notation: `#262626`
+* rgb notation: `rgb(38,38,38)`
 
 ## Installing Apprentice.
 
@@ -116,8 +146,12 @@ If you like what you see and want to make Apprentice your default colorscheme, a
 
 ;-)
 
----
+## Derivative works
 
 If light colorschemes are more your thing, [Disciple](https://github.com/romainl/Disciple) is an experimental and mostly unmaintained negative version of Apprentice.
 
 On the same note, [Lightning](https://github.com/wimstefan/Lightning) is a light fork of Apprentice worth considering.
+
+[Intern](https://github.com/drzel/intern-hexchat-theme) is an [HexChat](https://hexchat.github.io/) theme based on Apprentice.
+
+Go team!
